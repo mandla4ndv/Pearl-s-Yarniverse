@@ -264,7 +264,7 @@ function About() {
             </div>
             <div className="about-image-wrapper">
                 {/* --- Replace with a picture of the founder or workspace --- */}
-                <img src="src/pearlsLogo.png" alt="A person crocheting with colorful yarn"/>
+                <img src="main/src/pearlsLogo.png" alt="A person crocheting with colorful yarn"/>
             </div>
         </div>
         <div className="values-section">
