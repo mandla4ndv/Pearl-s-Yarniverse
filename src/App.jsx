@@ -33,13 +33,17 @@ const useScrollAnimation = () => {
 
 
 export default function App() {
+  // ... existing code ...
   // --- Replace these with your real links, API key and address
   const SOCIALS = useMemo(() => ({
     instagram: 'https://www.instagram.com/pearlsyarniverse?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
     tiktok: 'https://www.tiktok.com/@pearlsyarniverse?is_from_webapp=1&sender_device=pc',
     whatsapp: 'https://wa.me/27711470844', // South Africa intl format e.g., 27711470844
-    email: 'mailto:dylanmndlovu@gmail.com' // <-- Add your business email here
+    email: 'mailto:dylanmndlovu@gmail.com', // <-- Add your business email here
+    // --- ADDED YOUTUBE LINK HERE ---
+    youtube: 'https://www.youtube.com/@kamogelo_chipape' 
   }), [])
+  // ... existing code ...
 
   // --- IMPORTANT: Replace with your actual Google Maps Embed API Key ---
   // You can get one from the Google Cloud Console.
@@ -49,17 +53,17 @@ export default function App() {
   // --- Gallery images (replace with your work)
   const galleryImages = useMemo(() => [
     { src: '/1.jpg', alt: 'Purple bucket Hat' },
-    { src: 'src/2.jpg', alt: 'Stylish person wearing a ruffle hat' },
-    { src: 'src/3.jpg', alt: 'Baby blue ruffle hat' },
-    { src: 'src/4.jpg', alt: 'Handmade crochet scrunchies' },
-    { src: 'src/5.jpg', alt: 'Person wearing baby blue ruffle hat' },
-    { src: 'src/6.jpg', alt: 'Person wearing black and white cat hat' },
-    { src: 'src/7.jpg', alt: 'Pearl wearing red and white slouchy hat' },
-    { src: 'src/8.jpg', alt: 'Black and grey cat hat packaged' },
-    { src: 'src/9.jpg', alt: 'Black and white scrunchy' },
-    { src: 'src/10.jpg', alt: 'Purple and white scrunchy' },
-    { src: 'src/11.jpg', alt: 'Purple and Blue ruffle hat' },
-    { src: 'src/12.jpg', alt: 'Purple scrunchy' },
+    { src: '/2.jpg', alt: 'Stylish person wearing a ruffle hat' },
+    { src: '/3.jpg', alt: 'Baby blue ruffle hat' },
+    { src: '/4.jpg', alt: 'Handmade crochet scrunchies' },
+    { src: '/5.jpg', alt: 'Person wearing baby blue ruffle hat' },
+    { src: '/6.jpg', alt: 'Person wearing black and white cat hat' },
+    { src: '/7.jpg', alt: 'Pearl wearing red and white slouchy hat' },
+    { src: '/8.jpg', alt: 'Black and grey cat hat packaged' },
+    { src: '/9.jpg', alt: 'Black and white scrunchy' },
+    { src: '/10.jpg', alt: 'Purple and white scrunchy' },
+    { src: '/11.jpg', alt: 'Purple and Blue ruffle hat' },
+    { src: '/12.jpg', alt: 'Purple scrunchy' },
   
   
   ], [])
@@ -158,7 +162,7 @@ function Header({ navOpen, toggleNav, active, closeNav }) {
         <a href="#home" className="brand" onClick={closeNav}>
           {/* --- Smaller logo image --- */}
           <img
-            src="src/pearlsLogo.png"
+            src="/pearlsLogo.png"
             alt="Pearl's Yarniverse Logo"
             style={{ width: 40, height: 40, objectFit: 'contain', marginRight: 8 }}
           />
@@ -226,7 +230,7 @@ function Hero() {
           }}>
             <video
               className="hero-video"
-              src="src/5.mp4" // Replace with your video URL
+              src="/5.mp4" // Replace with your video URL
               autoPlay
               loop
               muted
@@ -264,7 +268,7 @@ function About() {
             </div>
             <div className="about-image-wrapper">
                 {/* --- Replace with a picture of the founder or workspace --- */}
-                <img src="main/src/pearlsLogo.png" alt="A person crocheting with colorful yarn"/>
+                <img src="/pearlsLogo.png" alt="A person crocheting with colorful yarn"/>
             </div>
         </div>
         <div className="values-section">
@@ -337,12 +341,12 @@ function Videos() {
   // --- IMPORTANT: Replace these with your actual video embed URLs ---
   // To get an embed URL from YouTube, click "Share" then "Embed" on a video.
   const knittingVideos = [
-    "src/2.mp4", // Placeholder
-    "src/1.mp4"  // Placeholder
+    "/2.mp4", // Placeholder
+    "/1.mp4"  // Placeholder
   ];
   const lashesVideos = [
-    "src/4.mp4", // Placeholder
-    "src/7.mp4"  // Placeholder
+    "/4.mp4", // Placeholder
+    "/7.mp4"  // Placeholder
   ];
 
   return (
@@ -445,7 +449,7 @@ function Contact({ socials }) {
         </div>
         <div className="contact-image-wrapper">
             {/* --- Replace with an inviting image of your products --- */}
-            <img src="src/8.jpg" alt="A stack of colorful, handmade crochet hats."/>
+            <img src="/8.jpg" alt="A stack of colorful, handmade crochet hats."/>
         </div>
       </div>
     </section>
@@ -500,6 +504,8 @@ function Footer({ socials, apiKey, address }) {
 
 /* ------------------------- Floating Socials ------------------------- */
 
+/* ------------------------- Floating Socials ------------------------- */
+
 function FloatingSocials({ socials }) {
   const items = [
     {
@@ -519,6 +525,17 @@ function FloatingSocials({ socials }) {
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path fill="currentColor"
             d="M21 8.5a7 7 0 0 1-4.9-2v8.2a5.7 5.7 0 1 1-5.7-5.7c.4 0 .7 0 1 .1V6.1c-.3 0-.7-.1-1-.1A8.3 8.3 0 1 0 19.7 14V7.9A9.3 9.3 0 0 0 21 8.5z" />
+        </svg>
+      ),
+    },
+    // --- NEW YOUTUBE BUTTON ADDED HERE ---
+    {
+      name: 'YouTube',
+      href: socials.youtube,
+      svg: (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor"
+            d="M19.7 4.3a2.5 2.5 0 0 0-1.8-1.8C16.3 2 12 2 12 2s-4.3 0-5.9.5A2.5 2.5 0 0 0 4.3 4.3C3.8 5.9 3.8 9 3.8 12s0 6.1.5 7.7a2.5 2.5 0 0 0 1.8 1.8c1.6.5 5.9.5 5.9.5s4.3 0 5.9-.5a2.5 2.5 0 0 0 1.8-1.8c.5-1.6.5-4.7.5-7.7s0-6.1-.5-7.7zM10 16.5V7.5L16 12l-6 4.5z" />
         </svg>
       ),
     },
@@ -544,7 +561,6 @@ function FloatingSocials({ socials }) {
     </div>
   )
 }
-
 /* ----------------------------- Lightbox ---------------------------- */
 
 function Lightbox({ open, image, onClose, onPrev, onNext }) {
