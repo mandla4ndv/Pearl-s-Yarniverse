@@ -48,7 +48,7 @@ export default function App() {
 
   // --- Gallery images (replace with your work)
   const galleryImages = useMemo(() => [
-    { src: 'src/1.jpg', alt: 'Purple bucket Hat' },
+    { src: '/1.jpg', alt: 'Purple bucket Hat' },
     { src: 'src/2.jpg', alt: 'Stylish person wearing a ruffle hat' },
     { src: 'src/3.jpg', alt: 'Baby blue ruffle hat' },
     { src: 'src/4.jpg', alt: 'Handmade crochet scrunchies' },
