@@ -52,18 +52,18 @@ export default function App() {
 
   // --- Gallery images (replace with your work)
   const galleryImages = useMemo(() => [
-    { src: '/1.jpg', alt: 'Purple bucket Hat' },
-    { src: '/2.jpg', alt: 'Stylish person wearing a ruffle hat' },
-    { src: '/3.jpg', alt: 'Baby blue ruffle hat' },
-    { src: '/4.jpg', alt: 'Handmade crochet scrunchies' },
-    { src: '/5.jpg', alt: 'Person wearing baby blue ruffle hat' },
-    { src: '/6.jpg', alt: 'Person wearing black and white cat hat' },
-    { src: '/7.jpg', alt: 'Pearl wearing red and white slouchy hat' },
-    { src: '/8.jpg', alt: 'Black and grey cat hat packaged' },
-    { src: '/9.jpg', alt: 'Black and white scrunchy' },
-    { src: '/10.jpg', alt: 'Purple and white scrunchy' },
-    { src: '/11.jpg', alt: 'Purple and Blue ruffle hat' },
-    { src: '/12.jpg', alt: 'Purple scrunchy' },
+    { src: '/images/1.jpg', alt: 'Purple bucket Hat' },
+    { src: '/images/2.jpg', alt: 'Stylish person wearing a ruffle hat' },
+    { src: '/images/3.jpg', alt: 'Baby blue ruffle hat' },
+    { src: '/images/4.jpg', alt: 'Handmade crochet scrunchies' },
+    { src: '/images/5.jpg', alt: 'Person wearing baby blue ruffle hat' },
+    { src: '/images/6.jpg', alt: 'Person wearing black and white cat hat' },
+    { src: '/images/7.jpg', alt: 'Pearl wearing red and white slouchy hat' },
+    { src: '/images/8.jpg', alt: 'Black and grey cat hat packaged' },
+    { src: '/images/9.jpg', alt: 'Black and white scrunchy' },
+    { src: '/images/10.jpg', alt: 'Purple and white scrunchy' },
+    { src: '/images/11.jpg', alt: 'Purple and Blue ruffle hat' },
+    { src: '/images/12.jpg', alt: 'Purple scrunchy' },
   
   
   ], [])
@@ -162,7 +162,7 @@ function Header({ navOpen, toggleNav, active, closeNav }) {
         <a href="#home" className="brand" onClick={closeNav}>
           {/* --- Smaller logo image --- */}
           <img
-            src="/pearlsLogo.png"
+            src="/images/pearlsLogo.png"
             alt="Pearl's Yarniverse Logo"
             style={{ width: 40, height: 40, objectFit: 'contain', marginRight: 8 }}
           />
@@ -230,7 +230,7 @@ function Hero() {
           }}>
             <video
               className="hero-video"
-              src="/5.mp4" // Replace with your video URL
+              src="/videos/5.mp4" // Replace with your video URL
               autoPlay
               loop
               muted
@@ -268,7 +268,7 @@ function About() {
             </div>
             <div className="about-image-wrapper">
                 {/* --- Replace with a picture of the founder or workspace --- */}
-                <img src="/pearlsLogo.png" alt="A person crocheting with colorful yarn"/>
+                <img src="/images/pearlsLogo.png" alt="A person crocheting with colorful yarn"/>
             </div>
         </div>
         <div className="values-section">
@@ -341,12 +341,12 @@ function Videos() {
   // --- IMPORTANT: Replace these with your actual video embed URLs ---
   // To get an embed URL from YouTube, click "Share" then "Embed" on a video.
   const knittingVideos = [
-    "/2.mp4", // Placeholder
-    "/1.mp4"  // Placeholder
+    "/videos/2.mp4", // Placeholder
+    "/videos/1.mp4"  // Placeholder
   ];
   const lashesVideos = [
-    "/4.mp4", // Placeholder
-    "/7.mp4"  // Placeholder
+    "/videos/4.mp4", // Placeholder
+    "/videos/7.mp4"  // Placeholder
   ];
 
   return (
@@ -449,7 +449,7 @@ function Contact({ socials }) {
         </div>
         <div className="contact-image-wrapper">
             {/* --- Replace with an inviting image of your products --- */}
-            <img src="/8.jpg" alt="A stack of colorful, handmade crochet hats."/>
+            <img src="/images/8.jpg" alt="A stack of colorful, handmade crochet hats."/>
         </div>
       </div>
     </section>
