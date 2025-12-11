@@ -476,6 +476,7 @@ function Footer({ socials, apiKey, address }) {
             <a href={socials.instagram} target="_blank" rel="noreferrer">Instagram</a>
             <a href={socials.tiktok} target="_blank" rel="noreferrer">TikTok</a>
             <a href={socials.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
+            <a href={socials.youtube} target="_blank" rel="noreferrer">YouTube</a>
           </div>
         </div>
 
@@ -501,8 +502,6 @@ function Footer({ socials, apiKey, address }) {
     </footer>
   )
 }
-
-/* ------------------------- Floating Socials ------------------------- */
 
 /* ------------------------- Floating Socials ------------------------- */
 
